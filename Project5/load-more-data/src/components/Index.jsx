@@ -13,13 +13,10 @@ export default function Index({ limit=5 }) {
             let res = await fetch(`${url}limit=${limit}&skip=${count === 0 ? 0 : count * limit}`);
 
             let jsonRes = await res.json();
-            console.log(jsonRes.products.length);
             if (jsonRes && jsonRes.products.length && jsonRes.products) {
                 setLoading(false);
-                console.log(jsonRes.products);
                 setData((prevData) =>
-                    prevData===null?
-                    [jsonRes.products]:[...prevData,...jsonRes.products]
+                    [...prevData,...jsonRes.products]
                 );
             }
 
@@ -44,7 +41,7 @@ export default function Index({ limit=5 }) {
            loading?
                 <div>Loading , please wait</div>:null
             }
-            {data&&data.length?<h1 style={{textAlign:"center" , color:"orange"}}>Welcome to My Shezzy's Store</h1>:null}
+            {data&&data.length?<h1 style={{textAlign:"center" , color:"orange"}}>Welcome to Goodo's Store</h1>:null}
             <div className="product-container">
                 
                 {
