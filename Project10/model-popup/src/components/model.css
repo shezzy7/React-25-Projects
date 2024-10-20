@@ -1,0 +1,68 @@
+.model-test-container{
+    text-align: center;
+}
+.cross-icon-container{
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.hide{
+    display: none;
+}
+.cross-icon-container{
+    background-color: tomato;
+    border-radius: 2px;
+    color: black;
+    float: right;
+    font-size:30px;
+    transition: 0.5s;
+}
+.cross-icon-container:hover{
+    background-color: burlywood;
+}
+button{
+    background-color: orange;
+    transition: 0.5s;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: sandybrown;
+}
+.model-container{
+    background-color: yellowgreen;
+    padding:10px;
+    /* margin: 10% auto; */
+    padding: 20px;
+    animation-name: animateModel;
+    animation-duration: 0.5s;
+    position: relative;
+}
+.header{
+    background-color: aquamarine;
+    padding: 5px;
+}
+.body{
+    padding: 10px;
+    background-color: turquoise;
+}
+.footer{
+    background-color:darkcyan;
+    padding: 7px;
+}
+@keyframes animateModel{
+    from{
+        top:-200px;
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+        top:0px;
+    }
+}
+.model-test-container{
+    background-color: magenta;
+}
